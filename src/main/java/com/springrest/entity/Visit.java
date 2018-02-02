@@ -31,7 +31,7 @@ public class Visit implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn( name = "patientId", nullable = false )
-	@JsonProperty(access = Access.WRITE_ONLY)
+	//@JsonProperty(access = Access.WRITE_ONLY)
 	private Patient patient;
 
 	public Integer getVisitId() {

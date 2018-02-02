@@ -89,26 +89,4 @@ public class Controller {
 		
 		return list;
 	}
-	
-	@GetMapping("/visits/{visitId}")
-	@Transactional
-	public int getAllPatientId(@PathVariable int visitId ){
-
-		System.out.println("In Get All Visit Service");
-		int i = visitRepository.getAllPatientId(visitId);
-		return i;
-	}
-	
-	@GetMapping("/visits/p/{patientId}")
-	@Transactional
-	public List<Visit> getAllVisitsByPatientId(@PathVariable int patientId ){
-
-		System.out.println("In Get All Visit Service");
-		List<Visit> list = visitRepository.getAllVisits(patientId);
-		for (Visit v : list)
-		{
-			System.out.println("I : " + v.toString());
-		}
-		return list;
-	}
 }

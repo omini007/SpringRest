@@ -50,7 +50,7 @@ public class Patient implements Serializable{
 		this.name = name;
 	}
 	
-	//@JsonIgnore
+	@JsonIgnore
 	public List<Visit> getVisits() {
 		return visits;
 	}
